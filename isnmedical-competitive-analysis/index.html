@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Strategy &amp; Competitive Analysis for isnmedical.com</title>
+<style>
+    /* --- Google Font Import --- */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap');
+
+    /* --- Global Styles & Reset --- */
+    :root {
+        --primary-color: #ff9900;
+        --background-color: #1a1a1a;
+        --text-color: #f0f0f0;
+        --card-bg-color: #2c2c2c;
+        --border-color: #444;
+        --font-heading: 'Poppins', sans-serif;
+        --font-body: 'Roboto', sans-serif;
+
+        --color-as: #ff9900;a
+        --color-kw: #ffc966;
+        --color-traffic: #f0f0f0;
+        --color-pages: #ff9900;
+        --color-backlinks: #ffbf66;
+        --color-domains: #f0f0f0;
+
+        --color-aiv: #8a2be2;
+        --color-men: #5f9ea0;
+        --color-cpt: #7fffd4;
+        --color-aio: #ff7f50;
+        --color-aim: #6495ed;
+        --color-gem: #dcdcdc;
+
+        --color-fb: #1877F2;
+        --color-ig: #E1306C;
+        --color-li: #0077B5;
+        --color-yt: #FF0000;
+        --color-tw: #1DA1F2;
+        --color-tt: #000000;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentation-container {
+        width: 100%;
+        max-width: 1200px;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: safe center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 40px 100px 40px;
+        overflow-y: auto;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.98);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+    }
+
+    .slide.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    
+    .slide::-webkit-scrollbar {
+        width: 8px;
+    }
+    .slide::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .slide::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 153, 0, 0.5);
+        border-radius: 10px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+    }
+    .slide::-webkit-scrollbar-thumb:hover {
+        background-color: var(--primary-color);
+    }
+
+    h1 {
+        font-family: var(--font-heading);
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    h2 {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        font-family: var(--font-heading);
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding: 10px 20px;
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+        border-radius: 8px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .slide-description {
+        font-size: 1.2rem;
+        max-width: 800px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background-color: var(--card-bg-color);
+        border-radius: 12px;
+        padding: 25px;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        border-top: 4px solid var(--primary-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(255, 153, 0, 0.15);
+    }
+
+    .card .icon-container svg {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+        fill: var(--primary-color);
+    }
+
+    .card h3 {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .card .data-value {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 10px;
+        color: #ccc;
+    }
+    
+    .card .data-value-large {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .highlight {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .highlight-as { color: var(--color-as); font-weight: 700; }
+    .highlight-kw { color: var(--color-kw); font-weight: 700; }
+    .highlight-traffic { color: var(--color-traffic); font-weight: 700; }
+
+    .data-table {
+        width: 100%;
+        max-width: 950px;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 1rem;
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 14px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+        word-break: break-word;
+    }
+
+    .data-table td:not(:first-child) {
+        text-align: right;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+    .data-table th {
+        background-color: #333;
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .data-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .data-table .highlight-row td {
+        background-color: rgba(255, 153, 0, 0.1);
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .data-table.centered-cols td:not(:first-child),
+    .data-table.centered-cols th:not(:first-child) {
+        text-align: center;
+    }
+
+    .status-yes { color: #4CAF50; font-weight: 700; }
+    .status-no { color: #f44336; font-weight: 700; }
+
+    .chart-wrapper {
+        width: 100%;
+        max-width: 900px;
+        height: 400px;
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        padding: 40px 40px 20px 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .chart-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+        border-left: 2px solid var(--border-color);
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .chart-bar {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bar-inner {
+        width: 70%;
+        max-width: 60px;
+        background: linear-gradient(to top, var(--primary-color), #ffbf66);
+        border-radius: 5px 5px 0 0;
+        height: 0;
+        transition: height 1s cubic-bezier(0.25, 1, 0.5, 1);
+        position: relative;
+    }
+
+    .bar-value {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 8px;
+        opacity: 0;
+        transition: opacity 0.5s ease 0.5s;
+    }
+
+    .bar-label {
+        margin-top: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .chart-bar.highlight .bar-inner {
+        background: white;
+        box-shadow: 0 0 15px var(--primary-color);
+    }
+
+    .chart-bar.highlight .bar-label,
+    .competitor-label.highlight {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .legend {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-bottom: 40px;
+        font-family: var(--font-body);
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+
+    .legend-color {
+        width: 15px;
+        height: 15px;
+        border-radius: 3px;
+    }
+    
+    .grouped-chart-container {
+        width: 100%;
+        max-width: 900px;
+        height: 400px;
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chart-area {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-around;
+        gap: 15px;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .competitor-group {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 4%;
+        height: 100%;
+    }
+
+    .bar-item {
+        flex: 1;
+        max-width: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+    }
+    
+    .bar-item .bar-inner {
+        position: relative;
+        width: 100%;
+        border-radius: 3px 3px 0 0;
+        transition: height 1s cubic-bezier(0.25, 1, 0.5, 1);
+        height: 0;
+    }
+
+    .bar-as .bar-inner { background: var(--color-as); }
+    .bar-kw .bar-inner { background: #ffc966; }
+    .bar-traffic .bar-inner { background: var(--color-traffic); }
+    .bar-pages .bar-inner { background: var(--color-pages); }
+    .bar-backlinks .bar-inner { background: var(--color-backlinks); }
+    .bar-domains .bar-inner { background: var(--color-domains); }
+
+    .competitor-group.highlight .bar-inner {
+        filter: brightness(1.2);
+        box-shadow: 0 0 8px white;
+    }
+
+    .name-row {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+
+    .competitor-label {
+        flex: 1;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    
+    .bar-item .tooltip {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -120%); 
+        background-color: transparent;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 600;
+        white-space: nowrap;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+    }
+
+    .h-chart-container {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .h-chart-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .h-chart-label {
+        width: 35%;
+        min-width: 140px;
+        text-align: right;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.2;
+    }
+
+    .h-chart-item.highlight .h-chart-label {
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    .competitor-name-h {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .page-url-h {
+        font-size: 0.8rem;
+        color: #999;
+    }
+
+    .h-chart-item.highlight .page-url-h {
+        color: #ccc;
+    }
+
+    .h-chart-bar {
+        flex-grow: 1;
+        background-color: var(--card-bg-color);
+        height: 35px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .bar-fill {
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary-color), #ffbf66);
+        border-radius: 5px;
+        transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .h-chart-item.highlight .bar-fill {
+        background: white;
+    }
+
+    .bar-percent {
+        position: absolute;
+        left: 10px;
+        color: #1a1a1a;
+        font-weight: 700;
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 0.5s ease 0.5s;
+    }
+
+    .small-text {
+        font-size: 0.9rem;
+        margin-top: 15px;
+        color: #aaa;
+        max-width: 700px;
+    }
+
+    .bar-label .trend-up { color: #4CAF50; font-weight: 900; }
+    .bar-label .trend-down { color: #f44336; font-weight: 900; }
+    .bar-label .trend-stable { color: #FFC107; font-weight: 900; }
+
+    .multi-chart-container {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        max-width: 1100px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .multi-chart-container .chart-wrapper {
+        flex: 1;
+        height: 320px;
+        padding: 20px;
+    }
+
+    .multi-chart-container h3 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        font-family: var(--font-heading);
+        color: var(--primary-color);
+    }
+
+    .strategy-link-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 28px;
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--primary-color);
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .strategy-link-btn:hover {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(255, 153, 0, 0.2);
+    }
+
+    .strategy-link-btn svg {
+        transition: transform 0.3s ease;
+    }
+
+    .strategy-link-btn:hover svg {
+        transform: translate(3px, -3px);
+    }
+    
+    #ai-chart .competitor-group { gap: 3%; }
+    #ai-chart .bar-item { max-width: 15px; }
+    #ai-chart .legend { gap: 15px; flex-wrap: wrap; margin-bottom: 20px;}
+    #ai-chart .bar-aiv .bar-inner { background: var(--color-aiv); }
+    #ai-chart .bar-men .bar-inner { background: var(--color-men); }
+    #ai-chart .bar-cpt .bar-inner { background: var(--color-cpt); }
+    #ai-chart .bar-aio .bar-inner { background: var(--color-aio); }
+    #ai-chart .bar-aim .bar-inner { background: var(--color-aim); }
+    #ai-chart .bar-gem .bar-inner { background: var(--color-gem); }
+        
+    #social-chart .competitor-group { gap: 2%; }
+    #social-chart .bar-item { max-width: 10px; }
+    #social-chart .legend { gap: 10px; flex-wrap: wrap; margin-bottom: 20px;}
+    #social-chart .bar-fb .bar-inner { background: var(--color-fb); }
+    #social-chart .bar-ig .bar-inner { background: var(--color-ig); }
+    #social-chart .bar-li .bar-inner { background: var(--color-li); }
+    #social-chart .bar-yt .bar-inner { background: var(--color-yt); }
+    #social-chart .bar-tw .bar-inner { background: var(--color-tw); }
+    #social-chart .bar-tt .bar-inner { background: var(--color-tt); }
+    
+    #social-chart .bar-item .tooltip {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s;
+        bottom: 100%;
+        top: auto; 
+        left: 50%;
+        transform: translateX(-50%) translateY(-5px);
+        margin-bottom: 5px;
+        background: rgba(0,0,0,0.9);
+        padding: 5px 8px;
+        border-radius: 4px;
+        z-index: 100;
+        border: 1px solid #555;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    
+    #social-chart .bar-item:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navigation { 
+        position: fixed; 
+        bottom: 20px; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        display: flex; 
+        align-items: center; 
+        gap: 20px; 
+        background-color: rgba(44, 44, 44, 0.8); 
+        padding: 10px 20px; 
+        border-radius: 50px; 
+        z-index: 1000; 
+        backdrop-filter: blur(5px); 
+    }
+    .nav-btn { 
+        background: transparent; 
+        border: 2px solid var(--primary-color); 
+        color: var(--primary-color); 
+        padding: 8px 20px; 
+        border-radius: 20px; 
+        font-family: var(--font-heading); 
+        font-weight: 600; 
+        cursor: pointer; 
+        transition: all 0.3s; 
+    }
+    .nav-btn:hover { 
+        background-color: var(--primary-color); 
+        color: var(--background-color); 
+    }
+    .nav-btn:disabled { 
+        border-color: #555; 
+        color: #555; 
+        cursor: not-allowed; 
+        background: transparent; 
+    }
+    #dots-container { display: flex; gap: 10px; }
+    .dot { 
+        width: 12px; 
+        height: 12px; 
+        background-color: #555; 
+        border-radius: 50%; 
+        cursor: pointer; 
+        transition: all 0.3s; 
+    }
+    .dot.active { 
+        background-color: var(--primary-color); 
+        transform: scale(1.2); 
+    }
+
+    /* --- Tablet & Small Screens (768px and below) --- */
+    @media (max-width: 768px) {
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.4rem; margin-bottom: 18px; }
+
+        .logo {
+            font-size: 1.6rem;
+            padding: 8px 15px;
+            letter-spacing: 1.5px;
+        }
+
+        .slide {
+            padding: 20px 15px 90px 15px;
+            overflow-y: auto;
+        }
+
+        .slide-description {
+            font-size: 1rem;
+            max-width: 100%;
+            line-height: 1.6;
+            margin-bottom: 22px;
+            padding: 0 5px;
+        }
+
+        .card-container { gap: 15px; margin-top: 20px; }
+        .card { width: 100%; max-width: 320px; padding: 20px; }
+        .card .icon-container svg { width: 45px; height: 45px; margin-bottom: 10px; }
+        .card h3 { font-size: 1.1rem; }
+        .card p { font-size: 1rem; }
+        .card .data-value { font-size: 0.85rem; }
+        .card .data-value-large { font-size: 1.6rem; }
+
+        .table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
+        .table-wrapper .data-table { font-size: 0.75rem; min-width: 480px; }
+        .table-wrapper .data-table th, .table-wrapper .data-table td { padding: 8px 6px; }
+
+        .slide > .data-table { font-size: 0.7rem; min-width: unset; table-layout: fixed; width: 100%; }
+        .slide > .data-table th, .slide > .data-table td { padding: 8px 5px; word-break: break-word; line-height: 1.3; }
+        .slide > .data-table th { font-size: 0.65rem; }
+
+        .chart-wrapper { height: 340px; padding: 20px 12px 15px 25px; max-width: 100%; }
+        .chart-container { gap: 4px; }
+        .bar-inner { max-width: 28px; }
+        .bar-value { font-size: 0.72rem; margin-bottom: 4px; }
+        .bar-label { font-size: 0.62rem; margin-top: 5px; white-space: normal; line-height: 1.1; }
+
+        .grouped-chart-container { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; height: 340px; padding: 15px; position: relative; }
+        .grouped-chart-container::-webkit-scrollbar { height: 6px; }
+        .grouped-chart-container::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 3px; }
+        .grouped-chart-container::-webkit-scrollbar-thumb { background-color: rgba(255, 153, 0, 0.5); border-radius: 3px; }
+        .grouped-chart-container::-webkit-scrollbar-thumb:hover { background-color: var(--primary-color); }
+        .grouped-chart-container .chart-area { min-width: 540px; gap: 10px; padding-top: 25px; }
+        .grouped-chart-container .name-row { min-width: 540px; }
+        .bar-item { max-width: 18px !important; }
+        .competitor-group { gap: 3px; }
+        .bar-item .tooltip { font-size: 0.72rem; }
+        .competitor-label { font-size: 0.7rem; white-space: nowrap; }
+
+        #ai-chart .chart-area { min-width: 680px; gap: 8px; }
+        #ai-chart .name-row { min-width: 680px; }
+        #ai-chart .bar-item { max-width: 14px !important; }
+        #ai-chart .competitor-group { gap: 3px; }
+        #ai-chart .bar-item .tooltip { font-size: 0.68rem; }
+        #ai-chart .legend { min-width: 680px; }
+
+        #social-chart .chart-area { min-width: 540px; }
+        #social-chart .name-row { min-width: 540px; }
+        #social-chart .bar-item { max-width: 14px !important; }
+        #social-chart .competitor-group { gap: 3px; }
+        #social-chart .legend { min-width: 540px; }
+
+        #scale-chart { overflow-x: visible; }
+        #scale-chart .chart-area { min-width: unset; gap: 4px; padding-top: 25px; }
+        #scale-chart .name-row { min-width: unset; }
+        #scale-chart .bar-item { max-width: 20px !important; }
+        #scale-chart .competitor-group { gap: 3px; }
+        #scale-chart .competitor-label { font-size: 0.62rem; white-space: normal; line-height: 1.1; }
+
+        .legend { gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .legend-item { font-size: 0.72rem; gap: 6px; }
+        .legend-color { width: 12px; height: 12px; }
+
+        .h-chart-container { gap: 12px; max-width: 100%; }
+        .h-chart-label { width: 42%; min-width: 105px; font-size: 0.8rem; }
+        .competitor-name-h { font-size: 0.82rem; }
+        .page-url-h { font-size: 0.68rem; }
+        .h-chart-bar { height: 30px; }
+        .bar-percent { font-size: 0.8rem; left: 6px; }
+
+        .multi-chart-container { flex-direction: column; gap: 15px; }
+        .multi-chart-container .chart-wrapper { height: 260px; }
+        .small-text { font-size: 0.8rem; margin-top: 12px; max-width: 100%; }
+        .strategy-link-btn { padding: 10px 20px; font-size: 1rem; gap: 8px; }
+        .strategy-link-btn svg { width: 16px; height: 16px; }
+        .navigation { padding: 6px 10px; gap: 10px; bottom: 12px; }
+        .nav-btn { padding: 6px 14px; font-size: 0.85rem; }
+        #dots-container { gap: 5px; }
+        .dot { width: 8px; height: 8px; }
+    }
+
+    /* --- Very Small Screens / Phones (480px and below) --- */
+    @media (max-width: 480px) {
+        h1 { font-size: 1.55rem; }
+        h2 { font-size: 1.2rem; margin-bottom: 15px; }
+        .logo { font-size: 1.3rem; padding: 6px 12px; letter-spacing: 1px; }
+        .slide { padding: 15px 10px 80px 10px; }
+        .slide-description { font-size: 0.88rem; line-height: 1.5; margin-bottom: 18px; }
+
+        .card-container { gap: 12px; margin-top: 15px; }
+        .card { padding: 16px; max-width: 300px; }
+        .card .icon-container svg { width: 40px; height: 40px; margin-bottom: 8px; }
+        .card h3 { font-size: 1rem; }
+        .card p { font-size: 0.9rem; }
+        .card .data-value { font-size: 0.78rem; }
+        .card .data-value-large { font-size: 1.4rem; }
+
+        .slide > .data-table { font-size: 0.62rem; }
+        .slide > .data-table th { font-size: 0.58rem; }
+        .slide > .data-table th, .slide > .data-table td { padding: 6px 3px; line-height: 1.2; }
+
+        .table-wrapper .data-table { font-size: 0.68rem; min-width: 400px; }
+        .table-wrapper .data-table th, .table-wrapper .data-table td { padding: 6px 4px; }
+
+        .chart-wrapper { height: 290px; padding: 15px 8px 12px 20px; }
+        .chart-container { gap: 2px; }
+        .bar-inner { max-width: 20px; }
+        .bar-value { font-size: 0.6rem; margin-bottom: 3px; }
+        .bar-label { font-size: 0.5rem; margin-top: 4px; line-height: 1; }
+
+        .grouped-chart-container { height: 290px; padding: 12px; }
+        .bar-item .tooltip { font-size: 0.62rem; }
+        .competitor-label { font-size: 0.6rem; }
+        #ai-chart .bar-item .tooltip { font-size: 0.58rem; }
+        #ai-chart .legend { gap: 6px; }
+        #social-chart .bar-item .tooltip { font-size: 0.58rem; }
+        #social-chart .legend { gap: 6px; }
+
+        .legend { gap: 6px; margin-bottom: 15px; }
+        .legend-item { font-size: 0.62rem; gap: 4px; }
+        .legend-color { width: 10px; height: 10px; }
+
+        .h-chart-container { gap: 10px; }
+        .h-chart-label { width: 45%; min-width: 95px; font-size: 0.7rem; }
+        .competitor-name-h { font-size: 0.72rem; }
+        .page-url-h { font-size: 0.6rem; }
+        .h-chart-bar { height: 26px; }
+        .bar-percent { font-size: 0.7rem; left: 5px; }
+
+        .multi-chart-container .chart-wrapper { height: 230px; }
+        .small-text { font-size: 0.72rem; }
+        .strategy-link-btn { padding: 8px 16px; font-size: 0.85rem; gap: 6px; }
+        .strategy-link-btn svg { width: 14px; height: 14px; }
+        .navigation { padding: 5px 8px; gap: 6px; bottom: 8px; }
+        .nav-btn { padding: 5px 10px; font-size: 0.78rem; }
+        #dots-container { gap: 4px; }
+        .dot { width: 6px; height: 6px; }
+    }
+
+    /* --- Extra Small Screens (360px and below) --- */
+    @media (max-width: 360px) {
+        h1 { font-size: 1.35rem; }
+        h2 { font-size: 1.05rem; }
+        .logo { font-size: 1.1rem; padding: 5px 10px; }
+        .slide-description { font-size: 0.8rem; }
+        .card { padding: 14px; max-width: 270px; }
+        .card .data-value-large { font-size: 1.25rem; }
+        .slide > .data-table { font-size: 0.55rem; }
+        .slide > .data-table th { font-size: 0.5rem; }
+        .slide > .data-table th, .slide > .data-table td { padding: 5px 2px; line-height: 1.1; }
+        .chart-wrapper { height: 260px; padding: 12px 6px 10px 18px; }
+        .grouped-chart-container { height: 260px; padding: 10px; }
+        .bar-label { font-size: 0.45rem; }
+        .competitor-label { font-size: 0.5rem; }
+        .bar-value { font-size: 0.52rem; }
+        .bar-item .tooltip { font-size: 0.5rem; }
+        .legend-item { font-size: 0.55rem; }
+        .legend-color { width: 8px; height: 8px; }
+        .h-chart-label { min-width: 85px; font-size: 0.62rem; }
+        .competitor-name-h { font-size: 0.65rem; }
+        .page-url-h { font-size: 0.55rem; }
+        .nav-btn { padding: 4px 8px; font-size: 0.72rem; }
+        .dot { width: 5px; height: 5px; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        <!-- Slide 1: Title Slide -->
+        <div class="slide">
+            <h1>SEO Strategy &amp; Competitive Analysis</h1>
+            <h2 style="font-weight: 300;">A Growth Blueprint for</h2>
+            <div class="logo">isnmedical.com</div>
+        </div>
+
+        <!-- Slide 2: Client Snapshot -->
+        <div class="slide">
+            <h2>Client Snapshot: isnmedical.com</h2>
+            <p class="slide-description">Understanding our position in the Medical Equipment market today.</p>
+            <div class="card-container">
+                <div class="card">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm8.29 11.29-2.58-2.58A8.85 8.85 0 0 0 19 10a9 9 0 1 0-9 9 8.85 8.85 0 0 0 7.71-3.29l2.58 2.58a1 1 0 0 0 1.41-1.41ZM4 10a7 7 0 1 1 14 0 7 7 0 0 1-14 0Z"></path>
+                        </svg>
+                    </div>
+                    <h3>Category</h3>
+                    <p>Medical Equipment</p>
+                    <p class="data-value">Laboratory & Diagnostic Systems</p>
+                </div>
+                <div class="card">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Nigeria</p>
+                    <p class="data-value">Nigerian Medical Sector</p>
+                </div>
+                <div class="card">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V18h14v-1.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V18h6v-1.5c0-2.33-4.67-3.5-7-3.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Target Audience</h3>
+                    <p>Hospitals & Clinics</p>
+                    <p class="data-value">Healthcare Providers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Market Opportunity -->
+        <div class="slide">
+            <h2>The Medical Equipment Market Opportunity</h2>
+            <p class="slide-description">The medical equipment industry is a massive commercial opportunity powered by the rising need for diagnostic systems and quality healthcare solutions.</p>
+            <div class="card-container">
+                <div class="card">
+                    <div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-2.18c.11-.31.18-.65.18-1a3 3 0 0 0-3-3H9a3 3 0 0 0-3 3c0 .35.07.69.18 1H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-8-2a1 1 0 0 1 1 1 1 1 0 0 1-1 1H9a1 1 0 0 1-1-1 1 1 0 0 1 1-1h2ZM4 8h16v11H4V8Z"></path></svg></div>
+                    <h3>Market Size</h3>
+                    <p class="data-value-large">$604.99 billion</p>
+                </div>
+                <div class="card">
+                    <div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"></path></svg></div>
+                    <h3>Growth Rate</h3>
+                    <p class="data-value-large">5.5% - 6.9%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Core Metrics Table -->
+        <div class="slide">
+            <h2>The Digital Landscape: At a Glance</h2>
+            <p class="slide-description">Here's how we stack up against key competitors in the Medical Equipment space based on critical indicators.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Competitor URL</th>
+                        <th>Organic Traffic</th>
+                        <th>Keywords</th>
+                        <th>Authority Score (AS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row"><td>isnmedical.com</td><td>303</td><td>30</td><td>24</td></tr>
+                    <tr><td>regino.com.ng</td><td>1.1k</td><td>166</td><td>10</td></tr>
+                    <tr><td>clinicaid.com.ng</td><td>1.6k</td><td>156</td><td>11</td></tr>
+                    <tr><td>medicalequipmentnig.com</td><td>60</td><td>14</td><td>20</td></tr>
+                    <tr><td>jnciltd.com</td><td>47</td><td>9</td><td>23</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 5: Organic Traffic Chart -->
+        <div class="slide">
+            <h2>Deep Dive: Monthly Organic Traffic</h2>
+            <p class="slide-description">This visualizes the gap in website visitors from search engines.</p>
+            <div class="chart-wrapper">
+                <div class="chart-container" data-max="2000">
+                    <div class="chart-bar highlight" data-value="303">
+                        <span class="bar-value" style="opacity: 0;">303</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">ISN Medical</span>
+                    </div>
+                    <div class="chart-bar" data-value="1100">
+                        <span class="bar-value" style="opacity: 0;">1.1k</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">Regino</span>
+                    </div>
+                    <div class="chart-bar" data-value="1600">
+                        <span class="bar-value" style="opacity: 0;">1.6k</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">ClinicAid</span>
+                    </div>
+                    <div class="chart-bar" data-value="60">
+                        <span class="bar-value" style="opacity: 0;">60</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">MedEquipNig</span>
+                    </div>
+                    <div class="chart-bar" data-value="47">
+                        <span class="bar-value" style="opacity: 0;">47</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">JNCI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Keywords Chart -->
+        <div class="slide">
+            <h2>Deep Dive: Keyword Footprint</h2>
+            <p class="slide-description">Ranking keywords are the "digital doorways" to a website.</p>
+            <div class="chart-wrapper">
+                <div class="chart-container" data-max="200">
+                    <div class="chart-bar highlight" data-value="30">
+                        <span class="bar-value" style="opacity: 0;">30</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">ISN Medical</span>
+                    </div>
+                    <div class="chart-bar" data-value="166">
+                        <span class="bar-value" style="opacity: 0;">166</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">Regino</span>
+                    </div>
+                    <div class="chart-bar" data-value="156">
+                        <span class="bar-value" style="opacity: 0;">156</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">ClinicAid</span>
+                    </div>
+                    <div class="chart-bar" data-value="14">
+                        <span class="bar-value" style="opacity: 0;">14</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">MedEquipNig</span>
+                    </div>
+                    <div class="chart-bar" data-value="9">
+                        <span class="bar-value" style="opacity: 0;">9</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">JNCI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 7a: Top Keywords Opportunity -->
+        <div class="slide">
+            <h2>Non-Branded Search Opportunities</h2>
+            <p class="slide-description">High-volume search terms driving traffic to competitors. Capturing these terms provides immediate traffic growth.</p>
+            <div class="table-wrapper">
+                <table class="data-table centered-cols">
+                    <thead>
+                        <tr>
+                            <th>URL</th>
+                            <th>Main Non-Branded Keywords</th>
+                            <th>Traffic Share %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row">
+                            <td>isnmedical.com</td>
+                            <td>equipment diagnostics</td>
+                            <td>5.94%</td>
+                        </tr>
+                        <tr>
+                            <td>regino.com.ng</td>
+                            <td>suction machine</td>
+                            <td>2.96%</td>
+                        </tr>
+                        <tr>
+                            <td>clinicaid.com.ng</td>
+                            <td>hospital equipment</td>
+                            <td>5.52%</td>
+                        </tr>
+                        <tr>
+                            <td>medicalequipmentnig.com</td>
+                            <td>pulse oximeter</td>
+                            <td>0.01%</td>
+                        </tr>
+                        <tr>
+                            <td>jnciltd.com</td>
+                            <td>jnc healthcare solutions</td>
+                            <td>1.81%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Slide 7: The SEO Relationship (Grouped Bar Chart) -->
+        <div class="slide">
+            <h2>The SEO Relationship: Authority Drives Results</h2>
+            <p class="slide-description">This chart visualizes the direct link between metrics. For each competitor, see how <span class="highlight-as">Authority</span>, <span class="highlight-kw">Keywords</span>, and <span class="highlight-traffic">Traffic</span> stack up.</p>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-as);"></span>Authority Score</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: #ffc966;"></span>Keywords</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-traffic);"></span>Traffic</div>
+            </div>
+            <div class="grouped-chart-container">
+                <div class="chart-area">
+                    <!-- 1. ISN Medical -->
+                    <div class="competitor-group highlight" data-as="24" data-kw="30" data-traffic="303">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">24</span></div></div>
+                        <div class="bar-item bar-kw"><div class="bar-inner" style="height: 0%;"><span class="tooltip">30</span></div></div>
+                        <div class="bar-item bar-traffic"><div class="bar-inner" style="height: 0%;"><span class="tooltip">303</span></div></div>
+                    </div>
+                    <!-- 2. Regino -->
+                    <div class="competitor-group" data-as="10" data-kw="166" data-traffic="1100">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">10</span></div></div>
+                        <div class="bar-item bar-kw"><div class="bar-inner" style="height: 0%;"><span class="tooltip">166</span></div></div>
+                        <div class="bar-item bar-traffic"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1.1k</span></div></div>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="competitor-group" data-as="11" data-kw="156" data-traffic="1600">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">11</span></div></div>
+                        <div class="bar-item bar-kw"><div class="bar-inner" style="height: 0%;"><span class="tooltip">156</span></div></div>
+                        <div class="bar-item bar-traffic"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1.6k</span></div></div>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="competitor-group" data-as="20" data-kw="14" data-traffic="60">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">20</span></div></div>
+                        <div class="bar-item bar-kw"><div class="bar-inner" style="height: 0%;"><span class="tooltip">14</span></div></div>
+                        <div class="bar-item bar-traffic"><div class="bar-inner" style="height: 0%;"><span class="tooltip">60</span></div></div>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="competitor-group" data-as="23" data-kw="9" data-traffic="47">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">23</span></div></div>
+                        <div class="bar-item bar-kw"><div class="bar-inner" style="height: 0%;"><span class="tooltip">9</span></div></div>
+                        <div class="bar-item bar-traffic"><div class="bar-inner" style="height: 0%;"><span class="tooltip">47</span></div></div>
+                    </div>
+                </div>
+                <div class="name-row">
+                    <div class="competitor-label highlight">ISN Medical</div>
+                    <div class="competitor-label">Regino</div>
+                    <div class="competitor-label">ClinicAid</div>
+                    <div class="competitor-label">MedEquipNig</div>
+                    <div class="competitor-label">JNCI</div>
+                </div>
+            </div>
+        </div>
+    
+<!-- Slide 8: Brand Awareness -->
+        <div class="slide active">
+            <h2>Brand Awareness: Branded Search</h2>
+            <p class="slide-description">This shows strength in branded search volume. MedEquipNig has a localized brand following that ISN Medical aims to replicate.</p>
+            <div class="chart-wrapper">
+                <div class="chart-container" data-max="1200">
+                    <!-- 1. ISN Medical -->
+                    <div class="chart-bar highlight" data-value="0">
+                        <span class="bar-value" style="opacity: 1;">N/A</span>
+                        <div class="bar-inner" style="height: 2%;"></div>
+                        <span class="bar-label">ISN Medical</span>
+                    </div>
+                    <!-- 2. Regino -->
+                    <div class="chart-bar" data-value="0">
+                        <span class="bar-value" style="opacity: 1;">N/A</span>
+                        <div class="bar-inner" style="height: 2%;"></div>
+                        <span class="bar-label">Regino</span>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="chart-bar" data-value="0">
+                        <span class="bar-value" style="opacity: 1;">N/A</span>
+                        <div class="bar-inner" style="height: 2%;"></div>
+                        <span class="bar-label">ClinicAid</span>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="chart-bar" data-value="1000">
+                        <span class="bar-value" style="opacity: 1;">1k</span>
+                        <div class="bar-inner" style="height: 83%;"></div>
+                        <span class="bar-label">MedEquipNig</span>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="chart-bar" data-value="13">
+                        <span class="bar-value" style="opacity: 1;">13</span>
+                        <div class="bar-inner" style="height: 5%;"></div>
+                        <span class="bar-label">JNCI</span>
+                    </div>
+                </div>
+            </div>
+            <p class="small-text" style="margin-top:20px;">Insight: Established brands have localized direct searches. We need to build brand recognition through SEO momentum.</p>
+        </div>
+
+     <!-- Slide 9: Website Scale & Merchant Depth -->
+        <div class="slide">
+            <h2>Website Scale &amp; Product Depth</h2>
+            <p class="slide-description">Competitors have built out index pages. Regino and JNCI are creating specific product catalogs to target long-tail searches.</p>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-pages);"></span>Total Index Pages</div>
+            </div>
+            <div class="grouped-chart-container" id="scale-chart">
+                <div class="chart-area">
+                    <!-- 1. ISN Medical -->
+                    <div class="competitor-group highlight" data-pages="27">
+                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">27</span></div></div>
+                    </div>
+                    <!-- 2. Regino -->
+                    <div class="competitor-group" data-pages="95">
+                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">95</span></div></div>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="competitor-group" data-pages="35">
+                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">35</span></div></div>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="competitor-group" data-pages="45">
+                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">45</span></div></div>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="competitor-group" data-pages="73">
+                        <div class="bar-item bar-pages"><div class="bar-inner" style="height: 0%;"><span class="tooltip">73</span></div></div>
+                    </div>
+                </div>
+                <div class="name-row">
+                    <div class="competitor-label highlight">ISN Medical</div>
+                    <div class="competitor-label">Regino</div>
+                    <div class="competitor-label">ClinicAid</div>
+                    <div class="competitor-label">MedEquipNig</div>
+                    <div class="competitor-label">JNCI</div>
+                </div>
+            </div>
+        </div>
+
+<!-- Slide 10: USA Traffic & Momentum -->
+        <div class="slide">
+            <h2>Focus on the Market: Traffic Trends</h2>
+            <p class="slide-description">Percentage of traffic specifically from target market signals (NG traffic baseline) and recent momentum. (Note: MedEquipNig shows high NG traffic %).</p>
+            <div class="chart-wrapper">
+                <div class="chart-container" data-max="105">
+                    <!-- 1. ISN Medical -->
+                    <div class="chart-bar highlight" data-value="42">
+                        <span class="bar-value" style="opacity: 0;">42%</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">ISN Medical <span class="trend-down">&#8595;</span></span>
+                    </div>
+                    <!-- 2. Regino -->
+                    <div class="chart-bar" data-value="30">
+                        <span class="bar-value" style="opacity: 0;">30%</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">Regino <span class="trend-stable">&#8594;</span></span>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="chart-bar" data-value="41">
+                         <span class="bar-value" style="opacity: 0;">41%</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">ClinicAid <span class="trend-stable">&#8594;</span></span>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="chart-bar" data-value="80">
+                        <span class="bar-value" style="opacity: 0;">80%</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">MedEquipNig <span class="trend-down">&#8595;</span></span>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="chart-bar" data-value="1">
+                        <span class="bar-value" style="opacity: 0;">1%</span>
+                        <div class="bar-inner" style="height: 0%;"></div>
+                        <span class="bar-label">JNCI <span class="trend-down">&#8595;</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Slide 11: Top Traffic-Driving Pages -->
+        <div class="slide">
+            <h2>Top Content: Traffic-Driving Pages</h2>
+            <p class="slide-description">This shows the single most valuable page for each site. Competitors find success with specific catalog products like Nebulizers or Accu-check pages.</p>
+            <div class="h-chart-container">
+                 <!-- 1. ISN Medical -->
+                 <div class="h-chart-item highlight">
+                    <div class="h-chart-label">
+                        <span class="competitor-name-h">isnmedical.com</span>
+                        <span class="page-url-h">/product/accu-check/</span>
+                    </div>
+                    <div class="h-chart-bar" data-value="53.48"><div class="bar-fill" style="width: 0%;"><span class="bar-percent" style="opacity: 0;">53.48%</span></div></div>
+                </div>
+                <!-- 2. Regino -->
+                <div class="h-chart-item">
+                    <div class="h-chart-label">
+                        <span class="competitor-name-h">Regino</span>
+                        <span class="page-url-h">/product/handheld-portable-nebulizer/</span>
+                    </div>
+                    <div class="h-chart-bar" data-value="17.07"><div class="bar-fill" style="width: 0%;"><span class="bar-percent" style="opacity: 0;">17.07%</span></div></div>
+                </div>
+                <!-- 3. ClinicAid -->
+                <div class="h-chart-item">
+                    <div class="h-chart-label">
+                        <span class="competitor-name-h">ClinicAid</span>
+                        <span class="page-url-h">/essential-medical-equipment.../</span>
+                    </div>
+                    <div class="h-chart-bar" data-value="53.62"><div class="bar-fill" style="width: 0%;"><span class="bar-percent" style="opacity: 0;">53.62%</span></div></div>
+                </div>
+                <!-- 4. MedEquipNig -->
+                 <div class="h-chart-item">
+                    <div class="h-chart-label">
+                        <span class="competitor-name-h">MedEquipNig</span>
+                        <span class="page-url-h">Homepage</span>
+                    </div>
+                    <div class="h-chart-bar" data-value="100.00"><div class="bar-fill" style="width: 0%;"><span class="bar-percent" style="opacity: 0;">100.00%</span></div></div>
+                </div>
+                <!-- 5. JNCI -->
+                <div class="h-chart-item">
+                    <div class="h-chart-label">
+                        <span class="competitor-name-h">JNCI</span>
+                        <span class="page-url-h">/products/maquet-servo-i</span>
+                    </div>
+                    <div class="h-chart-bar" data-value="41.81"><div class="bar-fill" style="width: 0%;"><span class="bar-percent" style="opacity: 0;">41.81%</span></div></div>
+                </div>
+            </div>
+        </div>
+
+<!-- Slide 12: Authority & Backlink Profile -->
+        <div class="slide">
+            <h2>The Foundation of Trust: Authority &amp; Backlinks</h2>
+            <p class="slide-description">Backlinks from unique domains build Authority. ClinicAid and ISN Medical have strong backlink profiles to sustain their rankings.</p>
+            <div class="legend">
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-as);"></span>Authority Score</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-backlinks);"></span>Backlinks</div>
+                <div class="legend-item"><span class="legend-color" style="background-color: var(--color-domains);"></span>Domains</div>
+            </div>
+            <div class="grouped-chart-container" id="authority-chart">
+                <div class="chart-area">
+                    <!-- 1. ISN Medical -->
+                    <div class="competitor-group highlight" data-as="24" data-backlinks="3100" data-domains="2200">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">24</span></div></div>
+                        <div class="bar-item bar-backlinks"><div class="bar-inner" style="height: 0%;"><span class="tooltip">3.1k</span></div></div>
+                        <div class="bar-item bar-domains"><div class="bar-inner" style="height: 0%;"><span class="tooltip">2.2k</span></div></div>
+                    </div>
+                    <!-- 2. Regino -->
+                    <div class="competitor-group" data-as="10" data-backlinks="1000" data-domains="261">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">10</span></div></div>
+                        <div class="bar-item bar-backlinks"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1k</span></div></div>
+                        <div class="bar-item bar-domains"><div class="bar-inner" style="height: 0%;"><span class="tooltip">261</span></div></div>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="competitor-group" data-as="11" data-backlinks="4100" data-domains="450">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">11</span></div></div>
+                        <div class="bar-item bar-backlinks"><div class="bar-inner" style="height: 0%;"><span class="tooltip">4.1k</span></div></div>
+                        <div class="bar-item bar-domains"><div class="bar-inner" style="height: 0%;"><span class="tooltip">450</span></div></div>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="competitor-group" data-as="20" data-backlinks="1200" data-domains="958">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">20</span></div></div>
+                        <div class="bar-item bar-backlinks"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1.2k</span></div></div>
+                        <div class="bar-item bar-domains"><div class="bar-inner" style="height: 0%;"><span class="tooltip">958</span></div></div>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="competitor-group" data-as="23" data-backlinks="1400" data-domains="1000">
+                        <div class="bar-item bar-as"><div class="bar-inner" style="height: 0%;"><span class="tooltip">23</span></div></div>
+                        <div class="bar-item bar-backlinks"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1.4k</span></div></div>
+                        <div class="bar-item bar-domains"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1k</span></div></div>
+                    </div>
+                </div>
+                <div class="name-row">
+                    <div class="competitor-label highlight">ISN Medical</div>
+                    <div class="competitor-label">Regino</div>
+                    <div class="competitor-label">ClinicAid</div>
+                    <div class="competitor-label">MedEquipNig</div>
+                    <div class="competitor-label">JNCI</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Marketing Mix - Blogs -->
+        <div class="slide">
+            <h2>Marketing Mix: Content</h2>
+            <p class="slide-description">Most competitors rely on blogs for engagement and capturing informational long-tail searches.</p>
+            <div class="table-wrapper">
+                <table class="data-table centered-cols">
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Has Blog Content?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="highlight-row"><td>isnmedical.com</td><td class="status-yes">&#10003; Yes</td></tr>
+                        <tr><td>regino.com.ng</td><td class="status-no">No</td></tr>
+                        <tr><td>clinicaid.com.ng</td><td class="status-yes">&#10003; Yes</td></tr>
+                        <tr><td>medicalequipmentnig.com</td><td class="status-yes">&#10003; Yes</td></tr>
+                        <tr><td>jnciltd.com</td><td class="status-yes">&#10003; Yes</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+<!-- Slide 14: Social Media Snapshot -->
+        <div class="slide">
+            <h2>Social Media Snapshot</h2>
+            <p class="slide-description">Follower counts across major platforms. ISN Medical maintains a massive presence on LinkedIn.<br><span style="font-size: 0.9em; color: #ccc;">(Hover over bars to view exact numbers)</span></p>
+            <div class="grouped-chart-container" id="social-chart">
+                <div class="legend">
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-fb);"></span>Facebook</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-ig);"></span>Instagram</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-li);"></span>LinkedIn</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-tt);"></span>TikTok</div>
+                </div>
+                <div class="chart-area">
+                     <!-- 1. ISN Medical -->
+                     <div class="competitor-group highlight" data-fb="5000" data-ig="2133" data-li="13685" data-tt="149">
+                        <div class="bar-item bar-fb"><div class="bar-inner" style="height: 0%;"><span class="tooltip">5k</span></div></div>
+                        <div class="bar-item bar-ig"><div class="bar-inner" style="height: 0%;"><span class="tooltip">2.1k</span></div></div>
+                        <div class="bar-item bar-li"><div class="bar-inner" style="height: 0%;"><span class="tooltip">13.6k</span></div></div>
+                        <div class="bar-item bar-tt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">149</span></div></div>
+                    </div>
+                    <!-- 2. Regino -->
+                    <div class="competitor-group" data-fb="611" data-ig="1056" data-li="12" data-tt="131">
+                        <div class="bar-item bar-fb"><div class="bar-inner" style="height: 0%;"><span class="tooltip">611</span></div></div>
+                        <div class="bar-item bar-ig"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1k</span></div></div>
+                        <div class="bar-item bar-li"><div class="bar-inner" style="height: 0%;"><span class="tooltip">12</span></div></div>
+                        <div class="bar-item bar-tt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">131</span></div></div>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="competitor-group" data-fb="580" data-ig="152" data-li="52" data-tt="0">
+                        <div class="bar-item bar-fb"><div class="bar-inner" style="height: 0%;"><span class="tooltip">580</span></div></div>
+                        <div class="bar-item bar-ig"><div class="bar-inner" style="height: 0%;"><span class="tooltip">152</span></div></div>
+                        <div class="bar-item bar-li"><div class="bar-inner" style="height: 0%;"><span class="tooltip">52</span></div></div>
+                        <div class="bar-item bar-tt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">N/A</span></div></div>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="competitor-group" data-fb="2600" data-ig="513" data-li="309" data-tt="0">
+                        <div class="bar-item bar-fb"><div class="bar-inner" style="height: 0%;"><span class="tooltip">2.6k</span></div></div>
+                        <div class="bar-item bar-ig"><div class="bar-inner" style="height: 0%;"><span class="tooltip">513</span></div></div>
+                        <div class="bar-item bar-li"><div class="bar-inner" style="height: 0%;"><span class="tooltip">309</span></div></div>
+                        <div class="bar-item bar-tt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">N/A</span></div></div>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="competitor-group" data-fb="1700" data-ig="1449" data-li="9850" data-tt="13">
+                        <div class="bar-item bar-fb"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1.7k</span></div></div>
+                        <div class="bar-item bar-ig"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1.4k</span></div></div>
+                        <div class="bar-item bar-li"><div class="bar-inner" style="height: 0%;"><span class="tooltip">9.8k</span></div></div>
+                        <div class="bar-item bar-tt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">13</span></div></div>
+                    </div>
+                </div>
+                <div class="name-row">
+                    <div class="competitor-label highlight">ISN Medical</div>
+                    <div class="competitor-label">Regino</div>
+                    <div class="competitor-label">ClinicAid</div>
+                    <div class="competitor-label">MedEquipNig</div>
+                    <div class="competitor-label">JNCI</div>
+                </div>
+            </div>
+        </div>
+
+<!-- Slide 15: AI & Search Visibility -->
+        <div class="slide">
+            <h2>AI &amp; Search Visibility</h2>
+            <p class="slide-description">How competitors are appearing in AI-driven search features. ISN Medical leads with strong visibility and brand mentions.</p>
+            <div class="grouped-chart-container" id="ai-chart">
+                 <div class="legend">
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-aiv);"></span>AI Visibility</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-men);"></span>Mentions</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-cpt);"></span>Chat GPT</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-aio);"></span>AI Overview</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-aim);"></span>AI Mode</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: var(--color-gem);"></span>Gemini</div>
+                </div>
+                <div class="chart-area">
+                    <!-- 1. ISN Medical -->
+                    <div class="competitor-group highlight" data-aiv="14" data-men="3" data-cpt="1" data-aio="1" data-aim="1" data-gem="0">
+                        <div class="bar-item bar-aiv"><div class="bar-inner" style="height: 0%;"><span class="tooltip">14</span></div></div>
+                        <div class="bar-item bar-men"><div class="bar-inner" style="height: 0%;"><span class="tooltip">3</span></div></div>
+                        <div class="bar-item bar-cpt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                        <div class="bar-item bar-aio"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                        <div class="bar-item bar-aim"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                        <div class="bar-item bar-gem"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                    </div>
+                     <!-- 2. Regino -->
+                     <div class="competitor-group" data-aiv="14" data-men="1" data-cpt="0" data-aio="0" data-aim="0" data-gem="0">
+                        <div class="bar-item bar-aiv"><div class="bar-inner" style="height: 0%;"><span class="tooltip">14</span></div></div>
+                        <div class="bar-item bar-men"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                        <div class="bar-item bar-cpt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                        <div class="bar-item bar-aio"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                         <div class="bar-item bar-aim"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                         <div class="bar-item bar-gem"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                    </div>
+                    <!-- 3. ClinicAid -->
+                    <div class="competitor-group" data-aiv="14" data-men="1" data-cpt="0" data-aio="1" data-aim="0" data-gem="0">
+                        <div class="bar-item bar-aiv"><div class="bar-inner" style="height: 0%;"><span class="tooltip">14</span></div></div>
+                        <div class="bar-item bar-men"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                        <div class="bar-item bar-cpt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                        <div class="bar-item bar-aio"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                         <div class="bar-item bar-aim"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                         <div class="bar-item bar-gem"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                    </div>
+                    <!-- 4. MedEquipNig -->
+                    <div class="competitor-group" data-aiv="0" data-men="0" data-cpt="0" data-aio="0" data-aim="0" data-gem="0">
+                        <div class="bar-item bar-aiv"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                        <div class="bar-item bar-men"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                        <div class="bar-item bar-cpt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                        <div class="bar-item bar-aio"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                         <div class="bar-item bar-aim"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                         <div class="bar-item bar-gem"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                    </div>
+                    <!-- 5. JNCI -->
+                    <div class="competitor-group" data-aiv="14" data-men="1" data-cpt="0" data-aio="1" data-aim="0" data-gem="1">
+                        <div class="bar-item bar-aiv"><div class="bar-inner" style="height: 0%;"><span class="tooltip">14</span></div></div>
+                        <div class="bar-item bar-men"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                        <div class="bar-item bar-cpt"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                        <div class="bar-item bar-aio"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                         <div class="bar-item bar-aim"><div class="bar-inner" style="height: 0%;"><span class="tooltip">0</span></div></div>
+                         <div class="bar-item bar-gem"><div class="bar-inner" style="height: 0%;"><span class="tooltip">1</span></div></div>
+                    </div>
+                </div>
+                <div class="name-row">
+                    <div class="competitor-label highlight">ISN Medical</div>
+                    <div class="competitor-label">Regino</div>
+                    <div class="competitor-label">ClinicAid</div>
+                    <div class="competitor-label">MedEquipNig</div>
+                    <div class="competitor-label">JNCI</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Slide 16: The Untapped Opportunity (Conclusion) -->
+        <div class="slide">
+            <h1>The <span class="highlight">Untapped Opportunity</span></h1>
+            <div class="icon-container" style="margin: 10px 0 20px 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="var(--primary-color)"><path d="M12,2A10,10,0,0,0,5.1,15.35L4,18.5a1,1,0,0,0,1.5,1.5L9.65,18.9A10,10,0,1,0,12,2Zm0,18a8,8,0,0,1-4.7-1.7l-.25-.21L3,18.92l2.83-3.77.21-.25A8,8,0,1,1,12,20Z"></path><path d="M12,6a1,1,0,0,0-1,1v5a1,1,0,0,0,2,0V7A1,1,0,0,0,12,6Z"></path><circle cx="12" cy="15" r="1"></circle></svg>
+            </div>
+            <p class="slide-description">
+                The data tells a clear story. ISN Medical has a strong foundation with high authority (AS 24) and massive LinkedIn presence (13.6k).
+                <br><br>
+                The untapped opportunity lies in expanding non-branded keywords (e.g., equipment diagnostics, suction machines) and scaling product index pages to bridge the gap and capture a slice of the $604B medical equipment market.
+            </p>
+        </div>
+
+      <!-- Slide 17: Our Strategic Path to Growth (Next Steps) -->
+        <div class="slide">
+            <h1>Our Strategic Path to Growth</h1>
+            <p class="slide-description">A 3-phase strategy to build authority and systematically close the gap on high-traffic competitors.</p>
+            <div class="card-container" style="align-items: stretch;">
+                <div class="card">
+                    <h3>1. Scale Product Pages</h3>
+                    <p>Build out more targeted equipment and reagent product pages to capture long-tail "Device + Diagnosis" search volume where competitors currently thrive.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Backlink Blitz</h3>
+                    <p>Leverage existing high authority (AS 24) by acquiring niche medical referring domains to match the domain diversity of top organic traffic competitors.</p>
+                </div>
+                <div class="card">
+                    <h3>3. AI Visibility</h3>
+                    <p>Optimize content to answer technical diagnostic and equipment questions to solidify dominance in ChatGPT, Gemini, and AI Overviews.</p>
+                </div>
+            </div>
+            <div style="margin-top: 40px; width: 100%; display: flex; justify-content: center;">
+                <a href="https://docs.google.com/spreadsheets/d/17-0wZ070GpX-OXl3sRfxjYhVxdp2-2HHBjIPr06V6VQ/edit?gid=0#gid=0" target="_blank" class="strategy-link-btn">
+                    View Research Sheet
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-4h-5v2h2.59L12 10.59 13.41 12 20 5.41V8h2V3a1 1 0 0 0-1-1z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="navigation">
+        <button id="prev-btn" class="nav-btn">Prev</button>
+        <div id="dots-container"></div>
+        <button id="next-btn" class="nav-btn">Next</button>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const presentationContainer = document.querySelector('.presentation-container');
+        const slides = Array.from(presentationContainer.children).filter(el => el.classList.contains('slide'));
+        
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const dotsContainer = document.getElementById('dots-container');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        dotsContainer.innerHTML = '';
+        
+        if (slides.length > 0) {
+            slides[0].classList.add('active');
+        }
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+        const dots = dotsContainer.querySelectorAll('.dot');
+        
+        const animateSimpleChart = (slide) => {
+            const chartWrappers = slide.querySelectorAll('.chart-wrapper');
+            if (chartWrappers.length === 0) return;
+            chartWrappers.forEach(wrapper => {
+                const chartContainer = wrapper.querySelector('.chart-container');
+                if (!chartContainer) return;
+                const bars = chartContainer.querySelectorAll('.chart-bar');
+                const maxVal = parseFloat(chartContainer.dataset.max);
+                if (isNaN(maxVal)) return;
+                bars.forEach(bar => {
+                    const value = parseFloat(bar.dataset.value);
+                    const height = (value / maxVal) * 100;
+                    const barInner = bar.querySelector('.bar-inner');
+                    const valueLabel = bar.querySelector('.bar-value');
+                    if(barInner) barInner.style.height = `${Math.max(2, height)}%`;
+                    if(valueLabel) {
+                        valueLabel.style.opacity = '1';
+                    }
+                });
+            });
+        };
+        const resetSimpleChart = (slide) => {
+            const chartWrappers = slide.querySelectorAll('.chart-wrapper');
+            if (chartWrappers.length === 0) return;
+            chartWrappers.forEach(wrapper => {
+                const chartContainer = wrapper.querySelector('.chart-container');
+                if (!chartContainer) return;
+                chartContainer.querySelectorAll('.bar-inner').forEach(bar => bar.style.height = '0%');
+                chartContainer.querySelectorAll('.bar-value').forEach(label => label.style.opacity = '0');
+            });
+        };
+
+        const animateGroupedChart = (slide, chartId, dataKeys) => {
+            const chartContainer = slide.querySelector(chartId);
+            if (!chartContainer) return;
+            const groups = chartContainer.querySelectorAll('.competitor-group');
+            const maxValues = {};
+            dataKeys.forEach(key => maxValues[key] = 0);
+
+            groups.forEach(group => {
+                dataKeys.forEach(key => {
+                    maxValues[key] = Math.max(maxValues[key], parseFloat(group.dataset[key] || 0));
+                });
+            });
+
+            groups.forEach(group => {
+                dataKeys.forEach(key => {
+                    const height = (parseFloat(group.dataset[key] || 0) / maxValues[key]) * 100;
+                    const bar = group.querySelector(`.bar-${key} .bar-inner`);
+                    if(bar) bar.style.height = `${Math.max(2, height)}%`;
+                });
+            });
+        };
+
+        const resetGroupedChart = (slide, chartId) => {
+             const chartContainer = slide.querySelector(chartId);
+            if (!chartContainer) return;
+            chartContainer.querySelectorAll('.bar-inner').forEach(bar => bar.style.height = '0%');
+        };
+
+        const animateHorizontalChart = (slide) => {
+            const chartContainer = slide.querySelector('.h-chart-container');
+            if (!chartContainer) return;
+            const bars = chartContainer.querySelectorAll('.bar-fill');
+            bars.forEach(bar => {
+                const value = bar.parentElement.dataset.value;
+                bar.style.width = `${value}%`;
+                bar.querySelector('.bar-percent').style.opacity = '1';
+            });
+        };
+        const resetHorizontalChart = (slide) => {
+            const chartContainer = slide.querySelector('.h-chart-container');
+            if (!chartContainer) return;
+            chartContainer.querySelectorAll('.bar-fill').forEach(bar => {
+                bar.style.width = '0%';
+                bar.querySelector('.bar-percent').style.opacity = '0';
+            });
+        };
+
+        const updateControls = () => {
+            slides.forEach((slide, index) => {
+                const isActive = index === currentSlide;
+                slide.classList.toggle('active', isActive);
+                
+                if (isActive) {
+                    setTimeout(() => {
+                        animateSimpleChart(slide);
+                        animateGroupedChart(slide, '.grouped-chart-container:not(#scale-chart):not(#authority-chart):not(#ai-chart):not(#social-chart)', ['as', 'kw', 'traffic']);
+                        animateGroupedChart(slide, '#scale-chart', ['pages']);
+                        animateGroupedChart(slide, '#authority-chart', ['as', 'backlinks', 'domains']);
+                        animateGroupedChart(slide, '#ai-chart', ['aiv', 'men', 'cpt', 'aio', 'aim', 'gem']);
+                        animateGroupedChart(slide, '#social-chart', ['fb', 'ig', 'li', 'tt']);
+                        animateHorizontalChart(slide);
+                    }, 50);
+                } else {
+                    resetSimpleChart(slide);
+                    resetGroupedChart(slide, '.grouped-chart-container:not(#scale-chart):not(#authority-chart):not(#ai-chart):not(#social-chart)');
+                    resetGroupedChart(slide, '#scale-chart');
+                    resetGroupedChart(slide, '#authority-chart');
+                    resetGroupedChart(slide, '#ai-chart');
+                    resetGroupedChart(slide, '#social-chart');
+                    resetHorizontalChart(slide);
+                }
+            });
+
+            if (dots.length > 0) {
+                dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
+            }
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        };
+
+        const goToSlide = (slideIndex) => { currentSlide = slideIndex; updateControls(); };
+        const showNextSlide = () => { if (currentSlide < totalSlides - 1) { currentSlide++; updateControls(); } };
+        const showPrevSlide = () => { if (currentSlide > 0) { currentSlide--; updateControls(); } };
+        
+        nextBtn.addEventListener('click', showNextSlide);
+        prevBtn.addEventListener('click', showPrevSlide);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') showNextSlide();
+            else if (e.key === 'ArrowLeft') showPrevSlide();
+        });
+
+        updateControls();
+    });
+</script>
+
+</body>
+</html>
